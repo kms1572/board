@@ -2,6 +2,7 @@ package com.example.board.controller;
 
 import com.example.board.dto.BoardDto;
 import com.example.board.service.BoardService;
+import com.example.board.service.MemberService;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,6 +14,7 @@ import java.util.List;
 @AllArgsConstructor
 public class BoardController {
     private BoardService boardService;
+    private MemberService memberService;
 
     /* 게시글 목록 */
     @GetMapping("/")
@@ -22,7 +24,7 @@ public class BoardController {
         model.addAttribute("boardList", boardList);
         model.addAttribute("pageList", pageList);
 
-        return "board/index.html";
+        return "/index.html";
     }
 
     @GetMapping("/post")
@@ -72,7 +74,7 @@ public class BoardController {
         List<BoardDto> boardDtoList = boardService.searchPosts(keyword);
         model.addAttribute("boardList", boardDtoList);
 
-        return "board/index.html";
+        return "/index.html";
     }
 
 

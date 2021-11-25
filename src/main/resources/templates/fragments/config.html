@@ -1,0 +1,35 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<th:block th:fragment="configFragment">
+    <meta name="description" content="Directing Template">
+    <meta name="keywords" content="Directing, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shop Homepage - Start Bootstrap Template</title>
+    <!-- 공통 css -->
+    <link rel="stylesheet" th:href="@{/css/styles.css}" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Js Plugins -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script th:src="@{/js/scripts.js}"></script>
+
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" th:href="@{/assets/favicon.ico}" />
+
+
+
+    <!-- default_layout을 사용하는 페이지에서 단독으로 넣을 css 공간 -->
+    <th:block layout:fragment="css" ></th:block>
+
+    <!-- default_layout을 사용하는 페이지에서 단독으로 넣을 script 공간 -->
+    <th:block layout:fragment="script" ></th:block>
+
+</th:block>
+</html>
+<body>
+
+</body>
+</html>
